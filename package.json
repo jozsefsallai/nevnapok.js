@@ -1,0 +1,40 @@
+{
+  "name": "nevnapok",
+  "version": "1.0.0",
+  "description": "API wrapper for the Hungarian namedays API - https://api.nevnapok.eu",
+  "main": "lib/Nevnapok.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jozsefsallai/nevnapok.js.git"
+  },
+  "author": "@jozsefsallai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jozsefsallai/nevnapok.js/issues"
+  },
+  "homepage": "https://github.com/jozsefsallai/nevnapok.js#readme",
+  "dependencies": {
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.1",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "files": [
+    "/dist",
+    "/lib"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "lint": "tslint --project .",
+    "prepack": "npm run build && webpack",
+    "prepare": "npm run build && webpack",
+    "watch": "npm run build -- --watch"
+  }
+}
