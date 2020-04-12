@@ -1,6 +1,6 @@
 {
   "name": "nevnapok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API wrapper for the Hungarian namedays API - https://api.nevnapok.eu",
   "main": "lib/Nevnapok.js",
   "repository": {
