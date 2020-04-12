@@ -2,6 +2,8 @@
 
 A Node.js/JavaScript wrapper for APIs supplying Hungarian namedays, specifically https://api.nevnapok.eu.
 
+(**English** | [Magyar](https://github.com/jozsefsallai/nevnapok.js/blob/master/README.hu.md))
+
 ## Usage
 
 **1. Install:**

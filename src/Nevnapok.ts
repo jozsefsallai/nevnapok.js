@@ -21,6 +21,10 @@ class Client {
     this.apiUrl = opts.apiUrl || 'https://api.nevnapok.eu';
   }
 
+  /**
+   * _get - Internal function to process GET requests
+   * @param {string} endpoint - The endpoint to attach to the API URL
+   */
   private _get(endpoint: string): Promise<string[] | null> {
     return new Promise((resolve, reject) => {
       return fetch(`${this.apiUrl}/${endpoint}`, {
@@ -40,10 +44,18 @@ class Client {
     });
   }
 
+  /**
+   * today - Getting namedays on the current day
+   */
   today(): Promise<string[] | null> {
     return this._get('ma');
   }
 
+  /**
+   * on - Getting namedays on a specific date
+   * @param {number} month - The number of the month (1-12)
+   * @param {number} day - The number of the day (1-31)
+   */
   on(month: number, day: number) : Promise<string[] | null> {
     if (month < 1 || month > 12) {
       throw new Error('nevnapok.js: Invalid month provided to the on() function.');
@@ -60,6 +72,10 @@ class Client {
     return this._get(`nap/${monthDayString}`);
   }
 
+  /**
+   * of - Getting namedays of a specific name
+   * @param {string} name - The name to search for
+   */
   of(name: string): Promise<string[] | null> {
     name = encodeURIComponent(name);
     return this._get(`nev/${name}`);

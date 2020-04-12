@@ -2,6 +2,8 @@
 
 Egy Node.js/JavaScript könyvtár, amelynek segítségével magyar névnapokkal kapcsolatos API-kat lehet használni, pontosabban a https://api.nevnapok.eu-t.
 
+([English](https://github.com/jozsefsallai/nevnapok.js/blob/master/README.md) | **Magyar**)
+
 ## Használat
 
 **1. Telepítsd:**
